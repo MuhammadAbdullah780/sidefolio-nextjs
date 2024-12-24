@@ -2,20 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* 
+  ======== GLOBAL STYLES  ==========
+*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  @apply m-0 p-0 box-border;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-white min-h-screen w-full;
 }
+
+/* 
+  ======== UTILITY CLASSES  ==========
+*/
+.nav-icon {
+  @apply stroke-[#B3B3B3] hover:stroke-[#707070] transition-all hover:scale-[1.1] duration-300;
+}
+
+/* 
+  ======== TYPOGRAPHY  ==========
+*/
