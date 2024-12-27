@@ -2,11 +2,7 @@
 import React from "react";
 
 //
-import {
-  AboutIcon,
-  ChatWithMeIcon,
-  HomeIcon
-} from "@/components/common/Icons";
+import { AboutIcon, ChatWithMeIcon, HomeIcon } from "@/components/common/Icons";
 import PortfolioNavItemMapper from "./NavItemMapper";
 
 type Props = { children: React.ReactNode };
@@ -35,8 +31,8 @@ const PortfolioLayout: React.FC<Props> = ({ children }) => {
         </nav>
       </aside>
       <div className="flex-1">
-        <main>{children}</main>
-        <footer>footer</footer>
+        <main className="min-h-screen">{children}</main>
+        {/* <footer>footer</footer> */}
       </div>
     </div>
   );
