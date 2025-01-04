@@ -24,3 +24,18 @@ body {
 /* 
   ======== TYPOGRAPHY  ==========
 */
+.heading-1 {
+  @apply text-lg font-medium text-gray-800;
+}
+
+p {
+  @apply text-sm text-gray-600;
+}
+
+.link {
+  @apply text-[13px] text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-none focus:decoration-2;
+}
+
+.section-heading {
+  @apply text-base font-medium text-gray-800;
+}

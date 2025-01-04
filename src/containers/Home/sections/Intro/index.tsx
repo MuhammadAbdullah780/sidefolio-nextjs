@@ -1,37 +1,26 @@
 import TextFlip from "@/components/common/TextFlip";
+import { PORTFOLIO_APP_DATA } from "@/data/appData";
 import Image from "next/image";
 import React from "react";
 
 const IntroSection = () => {
+  const { image, name, skils } = PORTFOLIO_APP_DATA.home.intro;
+
   return (
     <section className="flex items-center gap-x-3">
       <div className="shrink-0">
         <Image
-          alt="#"
+          alt={name || "#"}
           className="shrink-0 rounded-full"
-          src="/me.avif"
+          src={image}
           width={64}
           height={64}
         />
       </div>
 
       <div className="grow">
-        <h1 className="text-lg font-medium text-gray-800 dark:text-neutral-200">
-          Eliana Garcia
-        </h1>
-        {/* <p className="text-sm text-gray-600 dark:text-neutral-400">
-            Full Stack Developer
-          </p> */}
-        <TextFlip
-          words={[
-            "Full Stack Developer",
-            "Back End Developer",
-            "Gen AI Expert",
-            "Python Guru",
-            "Nest JS Mastero",
-            "Mern Stack Dev",
-          ]}
-        />
+        <h1 className="heading-1">{name}</h1>
+        <TextFlip words={skils} />
       </div>
     </section>
   );

@@ -1,13 +1,11 @@
-"use client";
-
 //
 import MaxWidth from "@/components/common/MaxWidth";
 import AboutMeSection from "./sections/AboutMe";
 import EducationSection from "./sections/Education";
 import ExperienceSection from "./sections/Experience";
 import IntroSection from "./sections/Intro";
-import SkillsSection from "./sections/Skills";
 import ProjectSection from "./sections/Projects";
+import SkillsSection from "./sections/Skills";
 
 const HomeContainer = () => {
   return (

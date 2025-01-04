@@ -1,73 +1,63 @@
 import { Sparkle } from "@/components/common/Icons";
 import { Marquee } from "@/components/common/Marquee";
+import { PORTFOLIO_APP_DATA } from "@/data/appData";
 import React from "react";
 
-type Props = {};
+const divideIntoFourParts = (array: any[]) => {
+  const partSize = Math.ceil(array.length / 4); // Calculate the approximate size of each part
+  const parts = [];
 
-const SkillsSection = (props: Props) => {
-  const frontendSkills = [
-    "HTML",
-    "CSS",
-    "JS",
-    "React JS",
-    "Next JS",
-    "Gatsby JS",
-    "Vue JS",
-    "Tailwind CSS",
-    "SCSS",
-  ];
-  const backendSkills = [
-    "Node JS",
-    "Express JS",
-    "Nest JS",
-    "Fast API",
-    "Django",
-    "Flask",
-  ];
-  const extraSkills = [
-    "Python",
-    "Javascript",
-    "Mongodb",
-    "Sequelize",
-    "Type ORM",
-    "Contentful",
-    "Strapi",
-    "Sanity",
-    "Firebase",
-    "Generative AI",
-    "Lang Chain",
-    "AI",
-    "AWS",
-    "Chroma DB",
-    "Neon DB",
-  ];
+  for (let i = 0; i < array.length; i += partSize) {
+    parts.push(array.slice(i, i + partSize));
+  }
+
+  return parts;
+};
+
+const SkillsSection = () => {
+  const { skills } = PORTFOLIO_APP_DATA.home;
+
+  //
+  const arr = divideIntoFourParts(skills);
+
+  //
+  const first = arr[0];
+  const second = arr[1];
+  const third = arr[2];
+  const fourth = arr[3];
 
   return (
     <section className="flex flex-col gap-3">
-      <h2 className="font-medium text-gray-800 dark:text-neutral-200">
-        Skills
-      </h2>
+      <h2 className="section-heading">Skills</h2>
 
       {/*  */}
       <Marquee pauseOnHover className="[--duration:20s]">
-        {frontendSkills.map((item) => (
-          <div className="flex items-start justify-center gap-3">
+        {first.map((item: string, i: number) => (
+          <div key={i} className="flex items-start justify-center gap-3">
             <h3 className="text-base font-semibold">{item}</h3>
             <Sparkle fill="#E9E9E9" />
           </div>
         ))}
       </Marquee>
       <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {backendSkills.map((item) => (
-          <div className="flex items-start justify-center gap-3">
+        {second.map((item: string, i: number) => (
+          <div key={i} className="flex items-start justify-center gap-3">
             <h3 className="text-base font-semibold">{item}</h3>
             <Sparkle fill="#E9E9E9" />
           </div>
         ))}
       </Marquee>
       <Marquee pauseOnHover className="[--duration:20s]">
-        {extraSkills.map((item) => (
-          <div className="flex items-start justify-center gap-3">
+        {third.map((item: string, i: number) => (
+          <div key={i} className="flex items-start justify-center gap-3">
+            <h3 className="text-base font-semibold">{item}</h3>
+            <Sparkle fill="#E9E9E9" />
+          </div>
+        ))}
+      </Marquee>
+      <Marquee reverse pauseOnHover className="[--duration:20s]">
+        {fourth.map((item: string, i: number) => (
+          <div key={i} className="flex items-start justify-center gap-3">
             <h3 className="text-base font-semibold">{item}</h3>
             <Sparkle fill="#E9E9E9" />
           </div>
