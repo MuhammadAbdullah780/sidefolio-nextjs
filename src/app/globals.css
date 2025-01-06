@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 /* 
   ======== GLOBAL STYLES  ==========
 */
@@ -19,6 +31,10 @@ body {
 */
 .nav-icon {
   @apply stroke-[#B3B3B3] hover:stroke-[#707070] transition-all hover:scale-[1.1] duration-300;
+}
+
+.page-container {
+  @apply flex flex-col gap-5 py-10 px-5;
 }
 
 /* 

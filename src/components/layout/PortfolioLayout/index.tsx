@@ -2,8 +2,15 @@
 import React from "react";
 
 //
-import { AboutIcon, ChatWithMeIcon, HomeIcon } from "@/components/common/Icons";
+import {
+  AboutIcon,
+  ChatWithMeIcon,
+  ContactIcon,
+  HomeIcon,
+  MyWorkIcon,
+} from "@/components/common/Icons";
 import PortfolioNavItemMapper from "./NavItemMapper";
+import { BriefcaseBusiness } from "lucide-react";
 
 type Props = { children: React.ReactNode };
 
@@ -20,6 +27,14 @@ const sidebarLinksMapper = [
     href: "/chat-with-me",
     Icon: ChatWithMeIcon,
   },
+  {
+    href: "/my-work",
+    Icon: MyWorkIcon,
+  },
+  {
+    href: "/contact",
+    Icon: ContactIcon,
+  },
 ];
 
 const PortfolioLayout: React.FC<Props> = ({ children }) => {
@@ -31,7 +46,9 @@ const PortfolioLayout: React.FC<Props> = ({ children }) => {
         </nav>
       </aside>
       <div className="flex-1">
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen" id="main-container-portfolio">
+          {children}
+        </main>
         {/* <footer>footer</footer> */}
       </div>
     </div>

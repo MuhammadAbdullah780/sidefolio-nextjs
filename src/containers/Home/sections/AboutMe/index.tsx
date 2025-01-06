@@ -36,7 +36,7 @@ const AboutMeSection = () => {
       <ul className="flex mt-3 flex-col gap-2">
         {contactInfoMapper?.map((item, i) => {
           return (
-            <li className="flex items-center gap-x-2.5">
+            <li key={i} className="flex items-center gap-x-2.5">
               <svg
                 className="shrink-0 size-3.5 stroke-gray-500"
                 xmlns="http://www.w3.org/2000/svg"
