@@ -44,7 +44,7 @@ body {
   @apply text-lg font-medium text-gray-800;
 }
 
-p {
+p, .para {
   @apply text-sm text-gray-600;
 }
 

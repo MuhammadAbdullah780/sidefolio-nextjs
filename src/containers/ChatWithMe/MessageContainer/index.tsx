@@ -1,13 +1,14 @@
 import { cx } from "@/functions/common";
-import { Message } from "ai";
+import { Message as TMessage } from "ai";
 import { Bot, Loader, User } from "lucide-react";
 import EmptyText from "./EmptyText";
 import { useRef } from "react";
+import Message from "./Message";
 
 // AIzaSyB3N0DPDxJKe7JRGcvL5dJwNcfpAtomH8U
 
 type Props = {
-  messages: Message[];
+  messages: TMessage[];
   isLoading?: boolean;
   isStreamStarted?: boolean;
 };
@@ -29,30 +30,14 @@ const MessageContainer: React.FC<Props> = ({
 }) => {
   const messagesEndRef = useRef(null);
 
+  console.log(messages, "MESSAGES_______");
+
   return (
     <div className="flex min-h-1 overflow-y-auto overflow-x-hidden no-scrollbar flex-1 flex-col gap-3">
       {messages?.length ? (
         <>
           {messages?.map((item, i) => {
-            return (
-              <div key={i} className="flex gap-2 items-start">
-                <div className="flex p-[5px] border border-gray-200 items-center rounded-full justify-center bg-gray-100">
-                  {item?.role === "user" ? (
-                    <User size={20} className="stroke-gray-500" />
-                  ) : (
-                    <Bot size={20} className="stroke-gray-500" />
-                  )}
-                </div>
-                <p
-                  className={cx(
-                    "mt-1 whitespace-pre-wrap",
-                    item?.role === "user" && "line-clamp-8"
-                  )}
-                >
-                  {item?.content}
-                </p>
-              </div>
-            );
+            return <Message message={item} />;
           })}
           {isLoading && !isStreamStarted && (
             <div className="flex gap-2 items-start">

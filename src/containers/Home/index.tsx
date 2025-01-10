@@ -16,6 +16,17 @@ const HomeContainer = () => {
       <ExperienceSection />
       <SkillsSection />
       <ProjectSection />
+      <section className="flex flex-col gap-2">
+        <h2 className="section-heading">Contact</h2>
+        <p>
+          Looking to start a project or you need consultation? Feel free to
+          contact me.
+        </p>
+
+        <div className="flex flex-col gap-1">
+          <p className="text-xs">Karachi, Pakistan</p>
+        </div>
+      </section>
     </MaxWidth>
   );
 };
