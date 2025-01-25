@@ -1,6 +1,7 @@
 import { Sparkle } from "@/components/common/Icons";
 import { Marquee } from "@/components/common/Marquee";
 import { PORTFOLIO_APP_DATA } from "@/data/appData";
+import { homePageData } from "@/data/homePage";
 import React from "react";
 
 const divideIntoFourParts = (array: any[]) => {
@@ -15,7 +16,12 @@ const divideIntoFourParts = (array: any[]) => {
 };
 
 const SkillsSection = () => {
-  const { skills } = PORTFOLIO_APP_DATA.home;
+  // const { skills } = PORTFOLIO_APP_DATA.home;
+  const {
+    sections: {
+      skills: { sectionTitle, skills },
+    },
+  } = homePageData;
 
   //
   const arr = divideIntoFourParts(skills);
@@ -28,7 +34,7 @@ const SkillsSection = () => {
 
   return (
     <section className="flex flex-col gap-3">
-      <h2 className="section-heading">Skills</h2>
+      <h2 className="section-heading">{sectionTitle}</h2>
 
       {/*  */}
       <Marquee pauseOnHover className="[--duration:20s]">

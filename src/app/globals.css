@@ -44,6 +44,10 @@ body {
   @apply text-lg font-medium text-gray-800;
 }
 
+.heading-xs {
+  @apply text-xs font-medium text-gray-800;
+}
+
 p, .para {
   @apply text-sm text-gray-600;
 }

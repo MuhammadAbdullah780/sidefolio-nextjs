@@ -1,15 +1,21 @@
 import { PORTFOLIO_APP_DATA } from "@/data/appData";
 import MilestoneCard from "../../MilestoneCard";
+import { homePageData } from "@/data/homePage";
 
 const EducationSection = () => {
   const { education: educationMapper } = PORTFOLIO_APP_DATA.home;
+  const {
+    sections: {
+      education: { sectionTitle, history },
+    },
+  } = homePageData;
 
   return (
     <section className="flex flex-col gap-3">
-      <h2 className="section-heading">Education</h2>
+      <h2 className="section-heading">{sectionTitle}</h2>
 
       <>
-        {educationMapper?.map((item, i) => {
+        {history?.map((item, i) => {
           return (
             <MilestoneCard
               key={i}

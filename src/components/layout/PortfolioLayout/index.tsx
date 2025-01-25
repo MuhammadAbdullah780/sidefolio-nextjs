@@ -11,6 +11,7 @@ import {
 } from "@/components/common/Icons";
 import PortfolioNavItemMapper from "./NavItemMapper";
 import { BriefcaseBusiness } from "lucide-react";
+import MaxWidth from "@/components/common/MaxWidth";
 
 type Props = { children: React.ReactNode };
 
@@ -46,10 +47,16 @@ const PortfolioLayout: React.FC<Props> = ({ children }) => {
         </nav>
       </aside>
       <div className="flex-1">
-        <main className="min-h-screen" id="main-container-portfolio">
+        <main className="min-h-screen bg-gray-50" id="main-container-portfolio">
           {children}
         </main>
-        {/* <footer>footer</footer> */}
+        <footer>
+          <MaxWidth className="px-5 py-3">
+            <p className="text-center">
+              © {new Date().getUTCFullYear()} — Muhammad Abdullah
+            </p>
+          </MaxWidth>
+        </footer>
       </div>
     </div>
   );
