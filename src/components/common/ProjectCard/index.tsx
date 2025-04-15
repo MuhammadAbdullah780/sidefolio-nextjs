@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { GithubLinkIcon, GlobeIcon } from "../Icons";
+import { ArrowRight } from "lucide-react";
+import { cx } from "@/functions/common";
 
 type Props = {
   startDate: string;
@@ -13,6 +15,8 @@ type Props = {
   skillsUsed: string[];
   liveUrl?: string;
   githubUrl?: string;
+  isViewable?: boolean;
+  id?: string;
 };
 
 const ProjectCard: React.FC<Props> = ({
@@ -25,9 +29,11 @@ const ProjectCard: React.FC<Props> = ({
   skillsUsed,
   startDate,
   title,
+  isViewable = false,
+  id = "",
 }) => {
   return (
-    <div className="col-span-1 rounded-lg bg-white text-card-foreground flex flex-col overflow-hidden border hover:shadow-lg h-full">
+    <div className="col-span-1 w-full max-w-[300px] rounded-lg bg-white text-card-foreground flex flex-col overflow-hidden border hover:shadow-lg h-full">
       <div className="block overflow-hidden relative cursor-pointer w-full h-40">
         <Image
           src={imgSrc}
@@ -60,7 +66,12 @@ const ProjectCard: React.FC<Props> = ({
           ))}
         </div>
       </div>
-      <div className="flex mt-1 flex-wrap gap-1 items-center pt-2 px-2 pb-2">
+      <div
+        className={cx(
+          "flex mt-1 flex-wrap gap-1 items-center pt-2 px-2 pb-2",
+          isViewable ? (liveUrl || githubUrl ? "" : "justify-end") : ""
+        )}
+      >
         {liveUrl && (
           <Link
             href={liveUrl}
@@ -82,6 +93,16 @@ const ProjectCard: React.FC<Props> = ({
           >
             <GithubLinkIcon />
             Github
+          </Link>
+        )}
+        {isViewable && id && (
+          <Link
+            href={`/projects/${id}`}
+            target="_blank"
+            className="items-center rounded-md border font-semibold border-gray-200 bg-gray-100 shadow flex gap-1 px-2 py-1 text-[10px]"
+            rel="noopener noreferrer"
+          >
+            View
           </Link>
         )}
       </div>
