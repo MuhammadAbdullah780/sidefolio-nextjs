@@ -17,7 +17,7 @@ const ProjectSection: React.FC<{}> = () => {
 
       <div className="grid gap-3 items-stretch grid-cols-2">
         {/*  */}
-        {recentProjects?.map((item, i) => {
+        {recentProjects?.slice(0, 2)?.map((item, i) => {
           return (
             <ProjectCard
               key={i}

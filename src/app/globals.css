@@ -44,12 +44,20 @@ body {
   @apply text-lg font-medium text-gray-800;
 }
 
+.heading-1-bold {
+  @apply text-lg text-gray-800 font-bold;
+}
+
 .heading-xs {
   @apply text-xs font-medium text-gray-800;
 }
 
 p, .para {
   @apply text-sm text-gray-600;
+}
+
+.para-xs {
+  @apply text-xs text-gray-600;
 }
 
 .link {
