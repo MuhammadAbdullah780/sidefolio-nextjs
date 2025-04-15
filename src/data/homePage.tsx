@@ -33,6 +33,26 @@ export const homePageData = {
       url: "https://www.upwork.com/freelancers/~0150e5f2a03338ed23",
       text: "My Upwork",
     },
+    {
+      platform: "fiver",
+      url: "https://www.fiverr.com/mohammadabdu936",
+      text: "My fiver",
+    },
+    {
+      platform: "phone",
+      url: "tel:+923353975358",
+      text: "Phone",
+    },
+    {
+      platform: "message",
+      url: "sms:+923353975358",
+      text: "Message",
+    },
+    {
+      platform: "twitter",
+      url: "https://twitter.com/ma0401431",
+      text: "Twitter",
+    },
   ],
   sections: {
     education: {

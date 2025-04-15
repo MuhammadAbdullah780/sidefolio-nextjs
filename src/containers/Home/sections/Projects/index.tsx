@@ -1,3 +1,4 @@
+import { Button } from "@/components/common/Button";
 import ProjectCard from "@/components/common/ProjectCard";
 import { PORTFOLIO_APP_DATA } from "@/data/appData";
 import { homePageData } from "@/data/homePage";
@@ -34,6 +35,8 @@ const ProjectSection: React.FC<{}> = () => {
           );
         })}
       </div>
+
+      <Button size="base" >View All Projects</Button>
     </section>
   );
 };

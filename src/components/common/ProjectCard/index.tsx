@@ -27,7 +27,7 @@ const ProjectCard: React.FC<Props> = ({
   title,
 }) => {
   return (
-    <div className="col-span-1 rounded-lg bg-card text-card-foreground flex flex-col overflow-hidden border hover:shadow-lg h-full">
+    <div className="col-span-1 rounded-lg bg-white text-card-foreground flex flex-col overflow-hidden border hover:shadow-lg h-full">
       <div className="block overflow-hidden relative cursor-pointer w-full h-40">
         <Image
           src={imgSrc}
