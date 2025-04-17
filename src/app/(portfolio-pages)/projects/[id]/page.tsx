@@ -1,8 +1,7 @@
+// Components
 import IndividualProjectContainer from "@/containers/IndividualProject";
 
-type Props = {};
-
-const Page = (props: Props) => {
+const Page = () => {
   return <IndividualProjectContainer />;
 };
 

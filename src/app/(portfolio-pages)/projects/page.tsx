@@ -1,5 +1,7 @@
-import ProjectListingContainer from "@/containers/Projects";
 import React from "react";
+
+// Components
+import ProjectListingContainer from "@/containers/Projects";
 
 type Props = {};
 

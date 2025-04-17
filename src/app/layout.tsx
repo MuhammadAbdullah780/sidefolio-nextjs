@@ -1,5 +1,8 @@
-import { inter } from "@/fonts/Inter";
+// Styles
 import "./globals.css";
+
+// Fonts
+import { inter } from "@/fonts/Inter";
 
 export default function RootLayout({
   children,

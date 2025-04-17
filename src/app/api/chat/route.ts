@@ -1,6 +1,8 @@
-import { retrievePineconeDoc } from "@/functions/pinecone";
 import { google } from "@ai-sdk/google";
 import { smoothStream, streamText } from "ai";
+
+// Functions
+import { retrievePineconeDoc } from "@/functions/pinecone";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
