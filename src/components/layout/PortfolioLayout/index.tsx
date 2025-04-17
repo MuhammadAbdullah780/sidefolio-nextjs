@@ -29,7 +29,7 @@ const sidebarLinksMapper = [
     Icon: ChatWithMeIcon,
   },
   {
-    href: "/my-work",
+    href: "/projects",
     Icon: MyWorkIcon,
   },
   {
