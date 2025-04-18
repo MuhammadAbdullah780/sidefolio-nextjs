@@ -50,8 +50,8 @@ const SideLink = ({ config }: Props) => {
         className={cx(
           "group flex items-center rounded-lg px-3 py-2 text-sm font-medium",
           "transition-colors duration-200",
-          "hover:bg-secondary_light hover:text-white",
-          isActive && "bg-secondary_light text-white",
+          "hover:bg-custom-secondary_light hover:text-white",
+          isActive && "bg-custom-secondary_light text-white",
           isCollapsed && "justify-center"
         )}
       >
@@ -60,7 +60,9 @@ const SideLink = ({ config }: Props) => {
           className={cx(
             "flex-1 text-left whitespace-nowrap",
             // "transition-all duration-300 ease-in-out",
-            isCollapsed ? "w-0 opacity-0 ml-0" : "ml-3 w-auto opacity-100"
+            isCollapsed
+              ? "w-0 opacity-0 ml-0"
+              : "lg:ml-3 ml-0 w-0 lg:w-auto opacity-0 lg:opacity-100"
           )}
         >
           {config.title}

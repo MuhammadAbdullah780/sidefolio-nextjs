@@ -14,7 +14,7 @@ const Header: React.FC = () => {
       <PanelLeft
         onClick={toggleCollapsed}
         className={cx(
-          "stroke-gray1 cursor-pointer hidden lg:block",
+          "stroke-custom-gray1 cursor-pointer hidden lg:block",
           !isCollapsed && "rotate-180"
         )}
       />

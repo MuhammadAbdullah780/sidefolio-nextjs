@@ -24,9 +24,9 @@ const Sidebar: React.FC<Props> = () => {
   return (
     <aside
       className={cx(
-        "relative flex flex-col bg-secondary text-gray-300 print:hidden",
+        "relative flex flex-col bg-custom-secondary text-gray-300 print:hidden",
         "transition-all duration-300 ease-in-out",
-        isCollapsed ? "w-16" : "w-64"
+        isCollapsed ? "w-16" : "w-16 lg:w-64"
       )}
     >
       {/* Logo */}

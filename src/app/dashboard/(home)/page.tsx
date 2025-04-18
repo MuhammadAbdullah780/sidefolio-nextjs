@@ -1,9 +1,8 @@
-import React from "react";
+//
+import OverviewContainer from "@/containers/Overview";
 
-type Props = {};
-
-const Page = (props: Props) => {
-  return <div>Dashboard Home Page</div>;
+const Page = () => {
+  return <OverviewContainer />;
 };
 
 export default Page;
