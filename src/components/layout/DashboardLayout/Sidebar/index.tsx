@@ -41,7 +41,7 @@ const Sidebar: React.FC<Props> = () => {
       {/* Links */}
       <nav className="flex-1 space-y-1 px-3 py-4">
         {appRoutes.map((item) => (
-          <SideLink config={item} />
+          <SideLink key={item.title} config={item} />
         ))}
       </nav>
     </aside>

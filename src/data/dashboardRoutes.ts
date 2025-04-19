@@ -27,29 +27,7 @@ export const DASHBOARD_LINKS = [
     icon: LayoutDashboard,
     to: "/dashboard/projects",
     isMatched: (path: string): boolean => {
-      //
-      const possibilities = new Set([
-        "/dashboard/projects",
-        "/dashboard/projects/create",
-      ]);
-
-      return possibilities?.has(path);
+      return path === "/dashboard/projects";
     },
-    innerRoutes: [
-      {
-        title: "Create Project",
-        to: "/dashboard/projects/create",
-        isMatched: (path: string): boolean => {
-          return path === "/dashboard/projects/create";
-        },
-      },
-      {
-        title: "Listing",
-        to: "/dashboard/projects",
-        isMatched: (path: string): boolean => {
-          return path === "/dashboard/projects";
-        },
-      },
-    ],
   },
 ];

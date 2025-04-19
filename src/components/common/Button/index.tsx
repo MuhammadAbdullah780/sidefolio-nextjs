@@ -13,6 +13,32 @@ const buttonVariants = cva(
       variant: {
         grey_filled:
           "bg-[#f4f4f4] border border-[#ededed] hover:bg-[#DCDCDC] text-gray-800 hover:bg-gray-200",
+        primary: [
+          // border
+          "border-transparent",
+          // text color
+          "text-white",
+          // background color
+          "bg-primary",
+          // hover color
+          "hover:bg-primary/90",
+          // disabled
+          "disabled:bg-primary/50 disabled:text-white",
+        ],
+        blue_filled: [
+          // border
+          "border-transparent",
+          // text color
+          "text-white dark:text-white",
+          // background color
+          "bg-blue-500 dark:bg-blue-500",
+          // hover color
+          "hover:bg-blue-600 dark:hover:bg-blue-600",
+          // disabled
+          "disabled:bg-blue-300 disabled:text-white",
+          "disabled:dark:bg-blue-800 disabled:dark:text-blue-400",
+        ],
+        
       },
       size: {
         base: "py-2 px-4 rounded-md",

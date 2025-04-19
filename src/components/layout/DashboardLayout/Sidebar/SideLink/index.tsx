@@ -29,7 +29,7 @@ const SideLink = ({ config }: Props) => {
   const { isCollapsed } = useGlobalVarsStore();
 
   //
-  const hasChildren = config?.innerRoutes && config?.innerRoutes?.length > 0;
+  // const hasChildren = config?.innerRoutes && config?.innerRoutes?.length > 0;
 
   //
   const isActive = useMemo(() => {
@@ -40,10 +40,10 @@ const SideLink = ({ config }: Props) => {
     <div className="flex flex-col text-gray1">
       <button
         onClick={() => {
-          if (hasChildren) {
-            setIsOpen(!isOpen);
-            return;
-          }
+          // if (hasChildren) {
+          //   setIsOpen(!isOpen);
+          //   return;
+          // }
 
           router.push(config.to);
         }}
@@ -67,18 +67,18 @@ const SideLink = ({ config }: Props) => {
         >
           {config.title}
         </span>
-        {hasChildren && !isCollapsed && (
+        {/* {hasChildren && !isCollapsed && (
           <ChevronDown
             className={cx(
               "ml-auto h-4 w-4 transition-transform duration-200",
               isOpen && "rotate-180"
             )}
           />
-        )}
+        )} */}
       </button>
 
       {/* Nested Items */}
-      {hasChildren && !isCollapsed && (
+      {/* {hasChildren && !isCollapsed && (
         <div
           className={cx(
             "overflow-hidden transition-all duration-300 ease-in-out",
@@ -105,7 +105,7 @@ const SideLink = ({ config }: Props) => {
             ))}
           </ul>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
